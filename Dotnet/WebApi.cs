@@ -473,6 +473,20 @@ namespace VRCX
                     }
                 }
 
+                request.UserAgent = "VRC.Core.BestHTTP";
+                request.Headers["X-MacAddress"] = "920f2db5ce283591c151eeb18ef02e9ad7fc89d9";
+                request.Headers["X-Client-Version"] = "2025.4.1-1749--Release";
+                request.Headers["X-Platform"] = "standalonewindows";
+                request.Headers["X-GameServer-Version"] = "Release_1626";
+                request.Headers["X-Unity-Version"] = "2022.3.22f1-DWR";
+                request.Headers["X-Store"] = "steam";
+                request.Headers["X-VRC-Client-Framework"] = "unity";
+                //request.ContentType = "application/x-www-form-urlencoded";
+                //request.Headers["Accept-Encoding"] = "gzip, identity";
+                //request.KeepAlive = true;
+                //request.Headers["Connection"] = "Keep-Alive, TE";
+                //request.Headers["TE"] = "identity";
+
                 if (options.TryGetValue("uploadImage", out _))
                     await ImageUpload(request, options);
 
